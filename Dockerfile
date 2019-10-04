@@ -4,5 +4,5 @@ WORKDIR /usr/src/app
 COPY package*.json index.js ./
 RUN npm ci --only=production
 
-EXPOSE 3000
-CMD [ "npx", "micro" ]
+EXPOSE 80
+CMD [ "npx", "micro", "-p", "80" ]
